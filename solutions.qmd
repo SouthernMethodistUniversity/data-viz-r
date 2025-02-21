@@ -1,0 +1,9 @@
+# Solutions {.unnumbered}
+
+## Exercise #1
+
+1.  Write a function that ...
+
+2.  Write a loop that only prints out ... if ...
+
+## Exercise #2

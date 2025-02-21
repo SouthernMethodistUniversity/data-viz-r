@@ -1,4 +1,4 @@
-# Effective Data Visualization in R <img src="images/r_logo.png" align="right" height="139"/>
+# Welcome {.unnumbered}
 
 This workshop is the second in a series of three R workshops intended for complete beginners to learn the basics of the R programming language and get started on common data science and visualization applications. This first workshop covers the basics of installation, working with objects, and using control structures. Every workshop in the series concludes with hands-on exercises to help you put your new skills into practice.
 
@@ -6,4 +6,8 @@ The content for this workshop is developed and taught by the OIT Research Techno
 
 ## Objectives
 
+## License
+
 [![](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/)
+
+The content in this workshop is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License.](http://creativecommons.org/licenses/by-sa/4.0/)

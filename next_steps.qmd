@@ -1,0 +1,20 @@
+# Next Steps {.unnumbered}
+
+Now that you have mastered the basics of the R programming language, below are some resources to extend your learning.
+
+## Workshops
+
+The next two parts of this workshop series will take place at this time in the coming weeks.
+
+| Workshop                          | Date          | Time      | Location |
+|-----------------------------------|---------------|-----------|----------|
+| Effective Data Visualization in R | February 26th | 1:30-3:30 | FLE 109  |
+| Data Science Workflow in R        | March 5th     | 1:30-3:30 | FLE 109  |
+
+## Online Resources
+
+- [Hands-On Programming in R](https://rstudio-education.github.io/hopr) *by Garrett Grolemund*
+
+- [Advanced R](https://adv-r.hadley.nz/) *by Hadley Wickham*
+
+- [R for Data Science (2e)](https://r4ds.hadley.nz/) *by Hadley Wickham et. al.*
