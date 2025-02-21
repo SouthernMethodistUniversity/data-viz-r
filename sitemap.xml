@@ -2,58 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://southernmethodistuniversity.github.io/data-viz-r/index.html</loc>
-    <lastmod>2025-02-21T20:15:57.370Z</lastmod>
-  </url>
-  <url>
-    <loc>https://southernmethodistuniversity.github.io/data-viz-r/setup.html</loc>
-    <lastmod>2025-02-21T20:15:57.371Z</lastmod>
-  </url>
-  <url>
-    <loc>https://southernmethodistuniversity.github.io/data-viz-r/basics.html</loc>
-    <lastmod>2025-02-21T20:15:57.365Z</lastmod>
-  </url>
-  <url>
-    <loc>https://southernmethodistuniversity.github.io/data-viz-r/data_types.html</loc>
-    <lastmod>2025-02-21T20:15:57.365Z</lastmod>
-  </url>
-  <url>
-    <loc>https://southernmethodistuniversity.github.io/data-viz-r/data_structures.html</loc>
-    <lastmod>2025-02-21T20:15:57.365Z</lastmod>
-  </url>
-  <url>
-    <loc>https://southernmethodistuniversity.github.io/data-viz-r/functions.html</loc>
-    <lastmod>2025-02-21T20:15:57.366Z</lastmod>
-  </url>
-  <url>
-    <loc>https://southernmethodistuniversity.github.io/data-viz-r/ifelse.html</loc>
-    <lastmod>2025-02-21T20:15:57.366Z</lastmod>
-  </url>
-  <url>
-    <loc>https://southernmethodistuniversity.github.io/data-viz-r/loops.html</loc>
-    <lastmod>2025-02-21T20:15:57.371Z</lastmod>
+    <lastmod>2025-02-21T20:50:56.031Z</lastmod>
   </url>
   <url>
     <loc>https://southernmethodistuniversity.github.io/data-viz-r/solutions.html</loc>
-    <lastmod>2025-02-21T20:15:57.371Z</lastmod>
+    <lastmod>2025-02-21T20:50:56.032Z</lastmod>
   </url>
   <url>
     <loc>https://southernmethodistuniversity.github.io/data-viz-r/next_steps.html</loc>
-    <lastmod>2025-02-21T20:15:57.371Z</lastmod>
-  </url>
-  <url>
-    <loc>https://southernmethodistuniversity.github.io/data-viz-r/intro.html</loc>
-    <lastmod>2025-02-21T20:15:57.370Z</lastmod>
-  </url>
-  <url>
-    <loc>https://southernmethodistuniversity.github.io/data-viz-r/objects.html</loc>
-    <lastmod>2025-02-21T20:15:57.371Z</lastmod>
-  </url>
-  <url>
-    <loc>https://southernmethodistuniversity.github.io/data-viz-r/control.html</loc>
-    <lastmod>2025-02-21T20:15:57.365Z</lastmod>
+    <lastmod>2025-02-21T20:50:56.031Z</lastmod>
   </url>
   <url>
     <loc>https://southernmethodistuniversity.github.io/data-viz-r/handson.html</loc>
-    <lastmod>2025-02-21T20:15:57.366Z</lastmod>
+    <lastmod>2025-02-21T20:50:56.028Z</lastmod>
   </url>
 </urlset>
