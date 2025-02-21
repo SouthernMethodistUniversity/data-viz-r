@@ -1,6 +1,6 @@
 # Welcome {.unnumbered}
 
-This workshop is the second in a series of three R workshops intended for complete beginners to learn the basics of the R programming language and get started on common data science and visualization applications. This first workshop covers the basics of installation, working with objects, and using control structures. Every workshop in the series concludes with hands-on exercises to help you put your new skills into practice.
+This workshop is the second in a series of three R workshops intended for complete beginners to learn the basics of the R programming language and get started on common data science and visualization applications. This workshop covers the basics of data visualization in R using `ggplot`, `plotly`, and `leaflet`. Every workshop in the series concludes with hands-on exercises to help you put your new skills into practice.
 
 The content for this workshop is developed and taught by the OIT Research Technology Services team at SMU in collaboration with SMU Libraries.
 
