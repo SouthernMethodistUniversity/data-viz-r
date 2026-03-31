@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Effective Data Visualization in R",
     "section": "",
-    "text": "Welcome\nThis workshop is the second in a series of three R workshops intended for complete beginners to learn the basics of the R programming language and get started on common data science and visualization applications. This workshop covers the basics of data visualization in R using ggplot, plotly, and leaflet. Every workshop in the series concludes with hands-on exercises to help you put your new skills into practice.\nThe content for this workshop is developed and taught by the OIT Research Technology Services team at SMU in collaboration with SMU Libraries.",
+    "text": "Welcome\nThis workshop covers the basics of data visualization in R using ggplot, plotly, and leaflet. Every workshop in the series concludes with hands-on exercises to help you put your new skills into practice.\nThe content for this workshop is developed and taught by the OIT Research Technology Services team at SMU in collaboration with SMU Libraries.",
     "crumbs": [
       "Welcome"
     ]
@@ -27,6 +27,26 @@
     "text": "License\n\nThe content in this workshop is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.",
     "crumbs": [
       "Welcome"
+    ]
+  },
+  {
+    "objectID": "handson.html",
+    "href": "handson.html",
+    "title": "Hands-On Exercises",
+    "section": "",
+    "text": "Exercise #1",
+    "crumbs": [
+      "Hands-On Exercises"
+    ]
+  },
+  {
+    "objectID": "handson.html#exercise-2",
+    "href": "handson.html#exercise-2",
+    "title": "Hands-On Exercises",
+    "section": "Exercise #2",
+    "text": "Exercise #2",
+    "crumbs": [
+      "Hands-On Exercises"
     ]
   },
   {
@@ -67,7 +87,7 @@
     "href": "next_steps.html",
     "title": "Next Steps",
     "section": "",
-    "text": "Workshops\nThe next two parts of this workshop series will take place at this time in the coming weeks.",
+    "text": "Workshops\nNow that you have mastered the basics of the R programming language, below are some resources to extend your learning.\nThe next two parts of this workshop series will take place at this time in the coming weeks.",
     "crumbs": [
       "Next Steps"
     ]
@@ -90,26 +110,6 @@
     "text": "Online Resources\n\nHands-On Programming in R by Garrett Grolemund\nAdvanced R by Hadley Wickham\nR for Data Science (2e) by Hadley Wickham et. al.",
     "crumbs": [
       "Next Steps"
-    ]
-  },
-  {
-    "objectID": "handson.html",
-    "href": "handson.html",
-    "title": "Hands-On Exercises",
-    "section": "",
-    "text": "Exercise #1",
-    "crumbs": [
-      "Hands-On Exercises"
-    ]
-  },
-  {
-    "objectID": "handson.html#exercise-2",
-    "href": "handson.html#exercise-2",
-    "title": "Hands-On Exercises",
-    "section": "Exercise #2",
-    "text": "Exercise #2",
-    "crumbs": [
-      "Hands-On Exercises"
     ]
   }
 ]
