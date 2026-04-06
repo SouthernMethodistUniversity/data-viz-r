@@ -30,6 +30,17 @@
     ]
   },
   {
+    "objectID": "method.html",
+    "href": "method.html",
+    "title": "4  The Method",
+    "section": "",
+    "text": "Make a list of your constraints\n\nWho is your audience? Is this graphic for you, for a report, or for publishing?\nDo you have a color scheme or font you are required to use for branding?\nWhat graph types are compatible with your dataset? Is there a field standard?\n\nDefine a few research questions, then narrow it down to one.\nClean and transform your dataset, if needed.\nPerform an exploratory data analysis and identify which data answers your questions.\n\nThis includes statistical summaries, rough visualizations, and filtering.\n\nStart with an ugly graph and play around with scales, faceting, and graph types.\nFine tune your graphic to maximize the data-ink ratio, fit to your constraints, and make it look nice.\n\nConsider the color, font, and positioning. Do they softly draw your attention to the relevant data?\nAdd short meaningful labels that do not over explain.\nLayer any additional augmentations that color, font, position, and labels don’t address.\n\nRepeat steps 3-7 until you are satisfied, but remember that like art or writing, you can always improve.",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>The Method</span>"
+    ]
+  },
+  {
     "objectID": "handson.html",
     "href": "handson.html",
     "title": "Hands-On Exercises",
