@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Effective Data Visualization in R",
     "section": "",
-    "text": "Welcome\nThis workshop covers the basics of data visualization in R using ggplot, plotly, and leaflet. Every workshop in the series concludes with hands-on exercises to help you put your new skills into practice.\nThe content for this workshop is developed and taught by the OIT Research Technology Services team at SMU in collaboration with SMU Libraries.",
+    "text": "Welcome\nThis workshop covers the basics of data visualization in R using ggplot, plotly, and leaflet. It will conclude with hands-on exercises to help you put your new skills into practice.\nThe content for this workshop is developed and taught by the OIT Research Technology Services team at SMU in collaboration with SMU Libraries.",
     "crumbs": [
       "Welcome"
     ]
