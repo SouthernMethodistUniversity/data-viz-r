@@ -61,17 +61,6 @@
     ]
   },
   {
-    "objectID": "solutions.html#exercise-1",
-    "href": "solutions.html#exercise-1",
-    "title": "Solutions",
-    "section": "",
-    "text": "Write a function that …\nWrite a loop that only prints out … if …",
-    "crumbs": [
-      "Hands-On Exercises",
-      "Solutions"
-    ]
-  },
-  {
     "objectID": "solutions.html#exercise-2",
     "href": "solutions.html#exercise-2",
     "title": "Solutions",
@@ -87,7 +76,7 @@
     "href": "next_steps.html",
     "title": "Next Steps",
     "section": "",
-    "text": "Workshops\nNow that you have mastered the basics of the R programming language, below are some resources to extend your learning.\nThe next two parts of this workshop series will take place at this time in the coming weeks.",
+    "text": "Workshops\nNow that you have mastered the basics of the data visualization in R, below are some resources to extend your learning.\nThe next part of this workshop series will take place at this time in the coming weeks.",
     "crumbs": [
       "Next Steps"
     ]
@@ -97,7 +86,7 @@
     "href": "next_steps.html#workshops",
     "title": "Next Steps",
     "section": "",
-    "text": "Workshop\nDate\nTime\nLocation\n\n\n\n\nEffective Data Visualization in R\nFebruary 26th\n1:30-3:30\nFLE 109\n\n\nData Science Workflow in R\nMarch 5th\n1:30-3:30\nFLE 109",
+    "text": "Workshop\nDate\nTime\nLocation\n\n\n\n\nData Science Workflow in R\nMarch 5th\n1:30-3:30\nFLE 109",
     "crumbs": [
       "Next Steps"
     ]
@@ -107,7 +96,17 @@
     "href": "next_steps.html#online-resources",
     "title": "Next Steps",
     "section": "Online Resources",
-    "text": "Online Resources\n\nHands-On Programming in R by Garrett Grolemund\nAdvanced R by Hadley Wickham\nR for Data Science (2e) by Hadley Wickham et. al.",
+    "text": "Online Resources\n\nggplot2: Elegant Graphics for Data Analysis (3e) by Hadley Wickham et. al.\nFundamentals of Data Visualization by Claus O. Wilke",
+    "crumbs": [
+      "Next Steps"
+    ]
+  },
+  {
+    "objectID": "next_steps.html#other-resources",
+    "href": "next_steps.html#other-resources",
+    "title": "Next Steps",
+    "section": "Other Resources",
+    "text": "Other Resources\n\nThe Visual Display of Quantitative Information by Edward Tufte",
     "crumbs": [
       "Next Steps"
     ]
