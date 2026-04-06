@@ -30,6 +30,39 @@
     ]
   },
   {
+    "objectID": "why.html",
+    "href": "why.html",
+    "title": "1  Why Visualize?",
+    "section": "",
+    "text": "1.1 Anscombe’s Quartet\nA famous example that illustrates why visualizing your data is important is Anscombe’s Quartet. Looking at the 4 plots below, what do you notice?\nHere are the same 4 plots, with a “best fit” line draw through them. Notice they all fit the exact same line.\nHere are statistical summaries of the data in each plot. What do you notice?",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Why Visualize?</span>"
+    ]
+  },
+  {
+    "objectID": "why.html#the-datasaurus-dozen",
+    "href": "why.html#the-datasaurus-dozen",
+    "title": "1  Why Visualize?",
+    "section": "1.2 The Datasaurus Dozen",
+    "text": "1.2 The Datasaurus Dozen\nAnother classic, slightly more fun example is the Datasaurus Dozen, which all have the same statistical properties:",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Why Visualize?</span>"
+    ]
+  },
+  {
+    "objectID": "why.html#summary",
+    "href": "why.html#summary",
+    "title": "1  Why Visualize?",
+    "section": "1.3 Summary",
+    "text": "1.3 Summary\n\nTo efficiently communicate ideas\nSome patterns can only be seen visually\nAesthetics sell better than facts\nTo make data more ingestible",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Why Visualize?</span>"
+    ]
+  },
+  {
     "objectID": "method.html",
     "href": "method.html",
     "title": "4  The Method",
