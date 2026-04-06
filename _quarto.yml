@@ -20,19 +20,17 @@ book:
   repo-actions: [edit, issue]
   chapters:
     - index.qmd
-    #- part: intro.qmd
-    #  chapters: 
-    #    - setup.qmd
-    #    - basics.qmd
-    #- part: objects.qmd
-    #  chapters: 
-    #    - data_types.qmd
-    #    - data_structures.qmd
-    #    - functions.qmd
-    #- part: control.qmd
-    #  chapters: 
-    #    - ifelse.qmd
-    #    - loops.qmd
+    - part: "Foundations"
+      chapters: 
+        - why.qmd
+        - theory.qmd
+        - types.qmd
+    - part: "Building in R"
+      chapters:
+        - method.qmd
+        - ggplot.qmd
+        - plotly.qmd
+        - leaflet.qmd
     - part: handson.qmd
       chapters: 
         - solutions.qmd

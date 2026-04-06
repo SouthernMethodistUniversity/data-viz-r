@@ -1,0 +1,22 @@
+# The Method
+
+1. Make a list of your constraints
+    a. Who is your audience? Is this graphic for you, for a report, or for publishing?
+    b. Do you have a color scheme or font you are required to use for branding?
+    c. What graph types are compatible with your dataset? Is there a field standard?
+    
+2. Define a few research questions, then narrow it down to one.
+
+3. Clean and transform your dataset, if needed.
+
+4. Perform an exploratory data analysis and identify which data answers your questions.
+    a. This includes statistical summaries, rough visualizations, and filtering.
+    
+5. Start with an ugly graph and play around with scales, faceting, and graph types.
+
+6. Fine tune your graphic to maximize the data-ink ratio, fit to your constraints, and make it look nice.
+    a. Consider the color, font, and positioning. Do they softly draw your attention to the relevant data?
+    b. Add short meaningful labels that do not over explain.
+    c. Layer any additional augmentations that color, font, position, and labels don’t address.
+    
+7. Repeat steps 3-7 until you are satisfied, but remember that like art or writing, you can always improve.
