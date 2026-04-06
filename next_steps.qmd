@@ -1,20 +1,21 @@
 # Next Steps {.unnumbered}
 
-Now that you have mastered the basics of the R programming language, below are some resources to extend your learning.
+Now that you have mastered the basics of the data visualization in R, below are some resources to extend your learning.
 
 ## Workshops
 
-The next two parts of this workshop series will take place at this time in the coming weeks.
+The next part of this workshop series will take place at this time in the coming weeks.
 
 | Workshop                          | Date          | Time      | Location |
 |-----------------------------------|---------------|-----------|----------|
-| Effective Data Visualization in R | February 26th | 1:30-3:30 | FLE 109  |
 | Data Science Workflow in R        | March 5th     | 1:30-3:30 | FLE 109  |
 
 ## Online Resources
 
-- [Hands-On Programming in R](https://rstudio-education.github.io/hopr) *by Garrett Grolemund*
+- [ggplot2: Elegant Graphics for Data Analysis (3e)](https://ggplot2-book.org/) *by Hadley Wickham et. al.*
 
-- [Advanced R](https://adv-r.hadley.nz/) *by Hadley Wickham*
+- [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/) *by Claus O. Wilke*
 
-- [R for Data Science (2e)](https://r4ds.hadley.nz/) *by Hadley Wickham et. al.*
+## Other Resources
+
+- [The Visual Display of Quantitative Information](https://www.edwardtufte.com/book/the-visual-display-of-quantitative-information/) *by Edward Tufte*
