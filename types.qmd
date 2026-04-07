@@ -1,1 +1,101 @@
 # Graph Types
+
+Choosing the right graph type for your visualization can be daunting, but makes
+a world of difference for your audience.
+
+## [From Data to Viz](https://www.data-to-viz.com/)
+
+This tool provides an easy flow chart to decide what graph types are appropriate for your data and sometimes provides code examples of how to implement it in R! Out of the appropriate graphs, you will still need to decide which graph conveys your information the best.
+
+Visit the website and try it out for yourself: [from Data to Viz](https://www.data-to-viz.com/)
+
+![](./images/poster_small.png)
+
+## What to Avoid
+
+There are some very popular graph types that often seem intuitive, but in practice, 
+they make data harder to interpret rather than easier.
+
+### Pie Charts
+
+Pie charts are commonly used to show proportions, but they rely on angles and area, which humans are not great at comparing. This makes it difficult to accurately judge differences between categories, especially when values are similar.
+
+```{r}
+#| echo: false
+
+# Sample data
+categories <- c("A", "B", "C", "D")
+values <- c(40, 25, 20, 15)
+colors <- c("#4E79A7", "#F28E2B", "#E15759", "#76B7B2")
+
+pie(values,
+    labels = categories,
+    col = colors)
+```
+
+A better alternative to a pie chart is a **bar plot**:
+
+```{r}
+#| echo: false
+
+barplot(values,
+        names.arg = categories,
+        col = colors)
+```
+
+### Spaghetti Charts
+
+When trying to compare the same data across different groups, the temptation is to just plot a different line for each group. However, this can easily become a visual nightmare.
+
+```{r}
+#| echo: false
+
+# Load library
+library(ggplot2)
+
+# Create sample data
+set.seed(123)
+df <- data.frame(
+  time = rep(1:10, times = 9),
+  group = rep(paste0("G", 1:9), each = 10),
+  value = cumsum(rnorm(90, 0, 1))
+)
+
+ggplot(df, aes(x = time, y = value, color = group)) +
+  geom_line() +
+  theme_classic()
+```
+
+One alternative is to split the plots into multiple **"facets"**, or **subplots**. We will look at how to implement this in R in later sections.
+
+```{r}
+#| echo: false
+
+ggplot(df, aes(x = time, y = value)) +
+  geom_line(color = "#4E79A7") +
+  facet_wrap(~ group) +
+  theme_classic()
+```
+
+Sometimes, you want to highlight a specific group as it compares to the other groups in the dataset. A spaghetti plot is fine here, but with appropriate **highlighting** using color and line width:
+
+```{r}
+#| echo: false
+
+highlight_group <- "G3"
+
+ggplot(df, aes(x = time, y = value, group = group)) +
+  geom_line(color = "grey80") +
+  geom_line(
+    data = subset(df, group == highlight_group),
+    color = "#4E79A7",
+    linewidth = 1.2
+  ) +
+  theme_classic()
+```
+
+## Field Conventions
+
+In many fields there are standard or conventional visualizations that are used. When those conventions makes sense and the information is conveyed well, stick to them.
+
+But, do not be afraid to use your creative license where conventions are bad or don’t make sense. Often conventions are arbitrary, and you might make a big difference in your field by introducing a new way to visualize the data.

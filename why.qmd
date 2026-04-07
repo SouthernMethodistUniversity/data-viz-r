@@ -25,9 +25,11 @@ Another classic, slightly more fun example is the Datasaurus Dozen, which all ha
 
 ![](./images/datasaurus.png)
 
+To see more: [https://www.research.autodesk.com/publications/same-stats-different-graphs/](https://www.research.autodesk.com/publications/same-stats-different-graphs/)
+
 ## Summary
 
 - To efficiently communicate ideas
 - Some patterns can only be seen visually
-- Aesthetics sell better than facts
+- Aesthetics sell better than facts. See [this paper](https://doi.org/10.1016/j.ijresmar.2019.03.002) on the aesthetic fidelity effect.
 - To make data more ingestible

@@ -1,5 +1,8 @@
 # The Method
 
+The following 7-step method is a useful framework for building a visualization
+that answers a specific question.
+
 1. Make a list of your constraints
     a. Who is your audience? Is this graphic for you, for a report, or for publishing?
     b. Do you have a color scheme or font you are required to use for branding?
