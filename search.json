@@ -151,6 +151,523 @@
     ]
   },
   {
+    "objectID": "ggplot.html",
+    "href": "ggplot.html",
+    "title": "\n5  Using ggplot2\n",
+    "section": "",
+    "text": "5.1 Overview\nggplot2 is the primary visualization package in R. It is based on the grammar of graphics, a system for building plots by combining components.",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Using `ggplot2`</span>"
+    ]
+  },
+  {
+    "objectID": "ggplot.html#overview",
+    "href": "ggplot.html#overview",
+    "title": "\n5  Using ggplot2\n",
+    "section": "",
+    "text": "ggplot(data, aes(...)) +\n  geom_*()\n\n\ndata: dataset\n\n\naes(): maps variables to visual properties\n\n\ngeom_*(): defines how data are drawn\n\n\n+: adds layers",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Using `ggplot2`</span>"
+    ]
+  },
+  {
+    "objectID": "ggplot.html#basic-scatterplot",
+    "href": "ggplot.html#basic-scatterplot",
+    "title": "\n5  Using ggplot2\n",
+    "section": "\n5.2 Basic Scatterplot",
+    "text": "5.2 Basic Scatterplot\n\nlibrary(ggplot2)\n\nggplot(mtcars, aes(x = wt, y = mpg)) +\n  geom_point()",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Using `ggplot2`</span>"
+    ]
+  },
+  {
+    "objectID": "ggplot.html#encode-additional-information",
+    "href": "ggplot.html#encode-additional-information",
+    "title": "\n5  Using ggplot2\n",
+    "section": "\n5.3 Encode Additional Information",
+    "text": "5.3 Encode Additional Information\n\nggplot(mtcars, aes(wt, mpg, color = factor(cyl))) +\n  geom_point()",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Using `ggplot2`</span>"
+    ]
+  },
+  {
+    "objectID": "ggplot.html#aesthetic-mapping-vs-fixed-values",
+    "href": "ggplot.html#aesthetic-mapping-vs-fixed-values",
+    "title": "\n5  Using ggplot2\n",
+    "section": "\n5.4 Aesthetic Mapping vs Fixed Values",
+    "text": "5.4 Aesthetic Mapping vs Fixed Values\n\n\n\n\n\n\nNoteKey Rule\n\n\n\nMap variables inside aes(). Set constants outside aes().\n\n\n\nggplot(mtcars, aes(wt, mpg)) +\n  geom_point(color = \"blue\")",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Using `ggplot2`</span>"
+    ]
+  },
+  {
+    "objectID": "ggplot.html#add-layers",
+    "href": "ggplot.html#add-layers",
+    "title": "\n5  Using ggplot2\n",
+    "section": "\n5.5 Add Layers",
+    "text": "5.5 Add Layers\n\nggplot(mtcars, aes(wt, mpg)) +\n  geom_point() +\n  geom_smooth(method = \"lm\", se = FALSE)\n\n`geom_smooth()` using formula = 'y ~ x'",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Using `ggplot2`</span>"
+    ]
+  },
+  {
+    "objectID": "ggplot.html#color-best-practices",
+    "href": "ggplot.html#color-best-practices",
+    "title": "\n5  Using ggplot2\n",
+    "section": "\n5.6 Color Best Practices",
+    "text": "5.6 Color Best Practices\n\n\n\n\n\n\nTipUsing Color Effectively\n\n\n\n\nUse color to highlight important differences\nAvoid overly bright or distracting palettes\nEnsure sufficient contrast with the background\nConsider color blindness (use accessible palettes)\n\n\n\n\n# Better color palette\nggplot(mtcars, aes(wt, mpg, color = factor(cyl))) +\n  geom_point(size = 2) +\n  scale_color_brewer(palette = \"Set1\")\n\n\n\n\n\n\n\n\n# Continuous color scale\nggplot(mtcars, aes(wt, mpg, color = mpg)) +\n  geom_point(size = 2) +\n  scale_color_viridis_c()",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Using `ggplot2`</span>"
+    ]
+  },
+  {
+    "objectID": "ggplot.html#improve-labels-and-readability",
+    "href": "ggplot.html#improve-labels-and-readability",
+    "title": "\n5  Using ggplot2\n",
+    "section": "\n5.7 Improve Labels and Readability",
+    "text": "5.7 Improve Labels and Readability\n\nggplot(mtcars, aes(wt, mpg)) +\n  geom_point() +\n  geom_smooth(method = \"lm\", se = FALSE) +\n  labs(\n    title = \"Fuel Efficiency vs Weight\",\n    x = \"Weight\",\n    y = \"Miles per Gallon\"\n  )\n\n`geom_smooth()` using formula = 'y ~ x'",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Using `ggplot2`</span>"
+    ]
+  },
+  {
+    "objectID": "ggplot.html#step-7-themes",
+    "href": "ggplot.html#step-7-themes",
+    "title": "\n5  Using ggplot2\n",
+    "section": "\n5.8 Step 7: Themes",
+    "text": "5.8 Step 7: Themes\nThemes control the overall appearance of your plot.\n\nggplot(mtcars, aes(wt, mpg)) +\n  geom_point() +\n  theme_minimal()\n\n\n\n\n\n\n\n\nggplot(mtcars, aes(wt, mpg)) +\n  geom_point() +\n  theme_classic()\n\n\n\n\n\n\n\n\n5.8.1 Customizing Themes\n\nggplot(mtcars, aes(wt, mpg)) +\n  geom_point() +\n  theme_minimal() +\n  theme(\n    plot.title = element_text(size = 14, face = \"bold\"),\n    axis.title = element_text(size = 12)\n  )",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Using `ggplot2`</span>"
+    ]
+  },
+  {
+    "objectID": "ggplot.html#step-8-compare-groups-with-faceting",
+    "href": "ggplot.html#step-8-compare-groups-with-faceting",
+    "title": "\n5  Using ggplot2\n",
+    "section": "\n5.9 Step 8: Compare Groups with Faceting",
+    "text": "5.9 Step 8: Compare Groups with Faceting\n\nggplot(mtcars, aes(wt, mpg)) +\n  geom_point() +\n  facet_wrap(~ cyl)",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Using `ggplot2`</span>"
+    ]
+  },
+  {
+    "objectID": "ggplot.html#common-geometries",
+    "href": "ggplot.html#common-geometries",
+    "title": "\n5  Using ggplot2\n",
+    "section": "\n5.10 Common Geometries",
+    "text": "5.10 Common Geometries\n\nggplot(mtcars, aes(wt, mpg)) + geom_point()\n\n\n\n\n\n\nggplot(mtcars, aes(factor(cyl))) + geom_bar()\n\n\n\n\n\n\nggplot(mtcars, aes(mpg)) + geom_histogram(bins = 10)\n\n\n\n\n\n\nggplot(mtcars, aes(factor(cyl), mpg)) + geom_boxplot()",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Using `ggplot2`</span>"
+    ]
+  },
+  {
+    "objectID": "ggplot.html#workflow",
+    "href": "ggplot.html#workflow",
+    "title": "\n5  Using ggplot2\n",
+    "section": "\n5.11 Workflow",
+    "text": "5.11 Workflow\n\n\n\n\n\n\nTipRecommended Approach\n\n\n\n\nStart simple\n\nConfirm it answers your question\n\nAdd layers\n\nImprove clarity and aesthetics",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Using `ggplot2`</span>"
+    ]
+  },
+  {
+    "objectID": "ggplot.html#summary",
+    "href": "ggplot.html#summary",
+    "title": "\n5  Using ggplot2\n",
+    "section": "\n5.12 Summary",
+    "text": "5.12 Summary\n\nBuild plots with ggplot(data, aes(...))\n\nAdd layers with +\n\nMap variables inside aes()\n\nUse color intentionally\n\nUse themes to improve readability",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Using `ggplot2`</span>"
+    ]
+  },
+  {
+    "objectID": "ggplot.html#exercise",
+    "href": "ggplot.html#exercise",
+    "title": "\n5  Using ggplot2\n",
+    "section": "\n5.13 Exercise",
+    "text": "5.13 Exercise\nStarting with the following plot, do the following:\n\nColor by am\n\nAdd a smooth line\n\nApply a different theme\n\nUse a color palette\n\n\nggplot(mtcars, aes(wt, mpg)) +\n  geom_point()",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Using `ggplot2`</span>"
+    ]
+  },
+  {
+    "objectID": "plotly.html",
+    "href": "plotly.html",
+    "title": "\n6  Interactivity with plotly\n",
+    "section": "",
+    "text": "6.1 Overview\nplotly is a package for building interactive visualizations in R. It is especially useful when you want users to hover, zoom, pan, filter visually, and explore the data on their own.",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Interactivity with `plotly`</span>"
+    ]
+  },
+  {
+    "objectID": "plotly.html#overview",
+    "href": "plotly.html#overview",
+    "title": "\n6  Interactivity with plotly\n",
+    "section": "",
+    "text": "plot_ly(data = ..., x = ..., y = ..., type = ..., mode = ...)\n\n\ndata: dataset\n\n\nx, y: variables mapped to axes\n\n\ntype: general chart type\n\n\nmode: how marks are drawn\n\n\n%&gt;%: adds layers and layout options",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Interactivity with `plotly`</span>"
+    ]
+  },
+  {
+    "objectID": "plotly.html#basic-scatterplot",
+    "href": "plotly.html#basic-scatterplot",
+    "title": "\n6  Interactivity with plotly\n",
+    "section": "\n6.2 Basic Scatterplot",
+    "text": "6.2 Basic Scatterplot\n\nlibrary(plotly)\n\nLoading required package: ggplot2\n\n\n\nAttaching package: 'plotly'\n\n\nThe following object is masked from 'package:ggplot2':\n\n    last_plot\n\n\nThe following object is masked from 'package:stats':\n\n    filter\n\n\nThe following object is masked from 'package:graphics':\n\n    layout\n\nplot_ly(\n  data = mtcars,\n  x = ~wt,\n  y = ~mpg,\n  type = \"scatter\",\n  mode = \"markers\"\n)",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Interactivity with `plotly`</span>"
+    ]
+  },
+  {
+    "objectID": "plotly.html#why-use-plotly",
+    "href": "plotly.html#why-use-plotly",
+    "title": "\n6  Interactivity with plotly\n",
+    "section": "\n6.3 Why Use plotly?",
+    "text": "6.3 Why Use plotly?\n\n\n\n\n\n\nNoteKey Advantage\n\n\n\nThe main reason to use plotly is interactivity.\nUsers can: - hover for details - zoom into regions - pan across the figure - toggle traces on and off - explore patterns without changing the code",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Interactivity with `plotly`</span>"
+    ]
+  },
+  {
+    "objectID": "plotly.html#encode-additional-information",
+    "href": "plotly.html#encode-additional-information",
+    "title": "\n6  Interactivity with plotly\n",
+    "section": "\n6.4 Encode Additional Information",
+    "text": "6.4 Encode Additional Information\n\nplot_ly(\n  data = mtcars,\n  x = ~wt,\n  y = ~mpg,\n  color = ~factor(cyl),\n  type = \"scatter\",\n  mode = \"markers\"\n)",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Interactivity with `plotly`</span>"
+    ]
+  },
+  {
+    "objectID": "plotly.html#mapping-vs-fixed-values",
+    "href": "plotly.html#mapping-vs-fixed-values",
+    "title": "\n6  Interactivity with plotly\n",
+    "section": "\n6.5 Mapping vs Fixed Values",
+    "text": "6.5 Mapping vs Fixed Values\n\n\n\n\n\n\nNoteKey Rule\n\n\n\nMap variables with ~variable. Set constants directly.\n\n\n\nplot_ly(\n  data = mtcars,\n  x = ~wt,\n  y = ~mpg,\n  type = \"scatter\",\n  mode = \"markers\",\n  marker = list(color = \"blue\")\n)",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Interactivity with `plotly`</span>"
+    ]
+  },
+  {
+    "objectID": "plotly.html#add-rich-hover-information",
+    "href": "plotly.html#add-rich-hover-information",
+    "title": "\n6  Interactivity with plotly\n",
+    "section": "\n6.6 Add Rich Hover Information",
+    "text": "6.6 Add Rich Hover Information\n\nplot_ly(\n  data = mtcars,\n  x = ~wt,\n  y = ~mpg,\n  type = \"scatter\",\n  mode = \"markers\",\n  text = ~paste(\n    \"Model:\", rownames(mtcars),\n    \"&lt;br&gt;MPG:\", mpg,\n    \"&lt;br&gt;Weight:\", wt,\n    \"&lt;br&gt;Cylinders:\", cyl\n  ),\n  hoverinfo = \"text\"\n)\n\n\n\n\n\nHover text is one of the most useful features in plotly. It lets you keep the figure clean while still giving viewers access to more detail.",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Interactivity with `plotly`</span>"
+    ]
+  },
+  {
+    "objectID": "plotly.html#add-multiple-traces",
+    "href": "plotly.html#add-multiple-traces",
+    "title": "\n6  Interactivity with plotly\n",
+    "section": "\n6.7 Add Multiple Traces",
+    "text": "6.7 Add Multiple Traces\n\nplot_ly(data = mtcars, x = ~wt, y = ~mpg, type = \"scatter\", mode = \"markers\") %&gt;%\n  add_lines(y = ~fitted(lm(mpg ~ wt, data = mtcars)), name = \"Trend line\")\n\n\n\n\n\nInteractive plots are often built by adding traces instead of layering geoms.",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Interactivity with `plotly`</span>"
+    ]
+  },
+  {
+    "objectID": "plotly.html#color-best-practices",
+    "href": "plotly.html#color-best-practices",
+    "title": "\n6  Interactivity with plotly\n",
+    "section": "\n6.8 Color Best Practices",
+    "text": "6.8 Color Best Practices\n\n\n\n\n\n\nTipUsing Color Effectively\n\n\n\n\nUse color to distinguish meaningful groups\nAvoid using too many categories at once\nKeep contrast strong enough for readability\nUse accessible palettes when possible\n\n\n\n\nplot_ly(\n  data = mtcars,\n  x = ~wt,\n  y = ~mpg,\n  color = ~factor(cyl),\n  colors = \"Set1\",\n  type = \"scatter\",\n  mode = \"markers\"\n)\n\n\n\n\n\n\nplot_ly(\n  data = mtcars,\n  x = ~wt,\n  y = ~mpg,\n  color = ~mpg,\n  colors = \"viridis\",\n  type = \"scatter\",\n  mode = \"markers\"\n)",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Interactivity with `plotly`</span>"
+    ]
+  },
+  {
+    "objectID": "plotly.html#improve-labels-and-layout",
+    "href": "plotly.html#improve-labels-and-layout",
+    "title": "\n6  Interactivity with plotly\n",
+    "section": "\n6.9 Improve Labels and Layout",
+    "text": "6.9 Improve Labels and Layout\n\nplot_ly(\n  data = mtcars,\n  x = ~wt,\n  y = ~mpg,\n  type = \"scatter\",\n  mode = \"markers\"\n) %&gt;%\n  layout(\n    title = \"Fuel Efficiency vs Weight\",\n    xaxis = list(title = \"Weight\"),\n    yaxis = list(title = \"Miles per Gallon\")\n  )",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Interactivity with `plotly`</span>"
+    ]
+  },
+  {
+    "objectID": "plotly.html#styling-and-theming",
+    "href": "plotly.html#styling-and-theming",
+    "title": "\n6  Interactivity with plotly\n",
+    "section": "\n6.10 Styling and Theming",
+    "text": "6.10 Styling and Theming\nIn plotly, overall appearance is usually controlled through layout() rather than a theme system like ggplot2.\n\nplot_ly(\n  data = mtcars,\n  x = ~wt,\n  y = ~mpg,\n  type = \"scatter\",\n  mode = \"markers\"\n) %&gt;%\n  layout(\n    title = \"Fuel Efficiency vs Weight\",\n    paper_bgcolor = \"white\",\n    plot_bgcolor = \"white\",\n    xaxis = list(showgrid = FALSE),\n    yaxis = list(showgrid = FALSE)\n  )\n\n\n\n\n\n\n6.10.1 Custom Marker Styling\n\nplot_ly(\n  data = mtcars,\n  x = ~wt,\n  y = ~mpg,\n  type = \"scatter\",\n  mode = \"markers\",\n  marker = list(\n    size = 10,\n    opacity = 0.7\n  )\n)",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Interactivity with `plotly`</span>"
+    ]
+  },
+  {
+    "objectID": "plotly.html#compare-groups",
+    "href": "plotly.html#compare-groups",
+    "title": "\n6  Interactivity with plotly\n",
+    "section": "\n6.11 Compare Groups",
+    "text": "6.11 Compare Groups\n\nplot_ly(\n  data = mtcars,\n  x = ~wt,\n  y = ~mpg,\n  color = ~factor(cyl),\n  type = \"scatter\",\n  mode = \"markers\"\n)\n\n\n\n\n\nA common interactive alternative to faceting is to let users isolate groups by clicking the legend.",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Interactivity with `plotly`</span>"
+    ]
+  },
+  {
+    "objectID": "plotly.html#common-chart-types",
+    "href": "plotly.html#common-chart-types",
+    "title": "\n6  Interactivity with plotly\n",
+    "section": "\n6.12 Common Chart Types",
+    "text": "6.12 Common Chart Types\n\n# Scatterplot\nplot_ly(mtcars, x = ~wt, y = ~mpg, type = \"scatter\", mode = \"markers\")\n\n\n\n\n# Line chart\nplot_ly(economics, x = ~date, y = ~unemploy, type = \"scatter\", mode = \"lines\")\n\n\n\n\n# Bar chart\nplot_ly(mtcars, x = ~factor(cyl), type = \"histogram\")\n\n\n\n\n# Histogram\nplot_ly(mtcars, x = ~mpg, type = \"histogram\")\n\n\n\n\n# Boxplot\nplot_ly(mtcars, x = ~factor(cyl), y = ~mpg, type = \"box\")",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Interactivity with `plotly`</span>"
+    ]
+  },
+  {
+    "objectID": "plotly.html#a-brief-note-on-ggplotly",
+    "href": "plotly.html#a-brief-note-on-ggplotly",
+    "title": "\n6  Interactivity with plotly\n",
+    "section": "\n6.13 A Brief Note on ggplotly()\n",
+    "text": "6.13 A Brief Note on ggplotly()\n\nplotly can convert a ggplot2 graphic into an interactive figure with ggplotly().\n\nlibrary(ggplot2)\n\np &lt;- ggplot(mtcars, aes(wt, mpg)) +\n  geom_point()\n\nggplotly(p)\n\n\n\n\n\nThis can be useful for quick conversions, but when interactivity is the goal, it is often better to build the plot directly with plotly.",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Interactivity with `plotly`</span>"
+    ]
+  },
+  {
+    "objectID": "plotly.html#workflow",
+    "href": "plotly.html#workflow",
+    "title": "\n6  Interactivity with plotly\n",
+    "section": "\n6.14 Workflow",
+    "text": "6.14 Workflow\n\n\n\n\n\n\nTipRecommended Approach\n\n\n\n\nStart with the simplest interactive chart\nDecide what users should be able to explore\nAdd hover text, labels, and traces\nRefine layout for readability",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Interactivity with `plotly`</span>"
+    ]
+  },
+  {
+    "objectID": "plotly.html#summary",
+    "href": "plotly.html#summary",
+    "title": "\n6  Interactivity with plotly\n",
+    "section": "\n6.15 Summary",
+    "text": "6.15 Summary\n\nBuild interactive plots with plot_ly()\n\nUse hover, zoom, and legend interaction intentionally\nMap variables with ~\n\nUse layout() to control appearance\nBuild directly in plotly when interactivity is the main goal",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Interactivity with `plotly`</span>"
+    ]
+  },
+  {
+    "objectID": "plotly.html#exercise",
+    "href": "plotly.html#exercise",
+    "title": "\n6  Interactivity with plotly\n",
+    "section": "\n6.16 Exercise",
+    "text": "6.16 Exercise\nStarting with the following plot, do the following:\n\nColor by am\n\nAdd custom hover text\nAdd a trend line\nImprove the layout\n\n\nplot_ly(\n  data = mtcars,\n  x = ~wt,\n  y = ~mpg,\n  type = \"scatter\",\n  mode = \"markers\"\n)",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Interactivity with `plotly`</span>"
+    ]
+  },
+  {
+    "objectID": "leaflet.html",
+    "href": "leaflet.html",
+    "title": "\n7  Mapping with leaflet\n",
+    "section": "",
+    "text": "7.1 Overview\nleaflet is an R package for building interactive maps. It is especially useful when your data include locations, coordinates, regions, or boundaries and you want viewers to explore the map directly.",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Mapping with `leaflet`</span>"
+    ]
+  },
+  {
+    "objectID": "leaflet.html#overview",
+    "href": "leaflet.html#overview",
+    "title": "\n7  Mapping with leaflet\n",
+    "section": "",
+    "text": "leaflet(data = ...) %&gt;%\n  addTiles() %&gt;%\n  add*()\n\n\ndata: dataset\n\n\nleaflet(): initializes the map\n\n\naddTiles(): adds a basemap\n\n\nadd*(): adds markers, circles, polygons, or other layers\n\n\n%&gt;%: builds the map step by step",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Mapping with `leaflet`</span>"
+    ]
+  },
+  {
+    "objectID": "leaflet.html#basic-map",
+    "href": "leaflet.html#basic-map",
+    "title": "\n7  Mapping with leaflet\n",
+    "section": "\n7.2 Basic Map",
+    "text": "7.2 Basic Map\n\nlibrary(leaflet)\n\nleaflet() %&gt;%\n  addTiles()",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Mapping with `leaflet`</span>"
+    ]
+  },
+  {
+    "objectID": "leaflet.html#add-a-single-marker",
+    "href": "leaflet.html#add-a-single-marker",
+    "title": "\n7  Mapping with leaflet\n",
+    "section": "\n7.3 Add a Single Marker",
+    "text": "7.3 Add a Single Marker\n\nleaflet() %&gt;%\n  addTiles() %&gt;%\n  addMarkers(\n    lng = -96.7970,\n    lat = 32.7767,\n    popup = \"Dallas, Texas\"\n  )",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Mapping with `leaflet`</span>"
+    ]
+  },
+  {
+    "objectID": "leaflet.html#map-data-from-a-dataset",
+    "href": "leaflet.html#map-data-from-a-dataset",
+    "title": "\n7  Mapping with leaflet\n",
+    "section": "\n7.4 Map Data from a Dataset",
+    "text": "7.4 Map Data from a Dataset\n\nleaflet(quakes) %&gt;%\n  addTiles() %&gt;%\n  addMarkers(\n    lng = ~long,\n    lat = ~lat\n  )",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Mapping with `leaflet`</span>"
+    ]
+  },
+  {
+    "objectID": "leaflet.html#markers-vs-circle-markers",
+    "href": "leaflet.html#markers-vs-circle-markers",
+    "title": "\n7  Mapping with leaflet\n",
+    "section": "\n7.5 Markers vs Circle Markers",
+    "text": "7.5 Markers vs Circle Markers\n\n\n\n\n\n\nNoteKey Distinction\n\n\n\n\n\naddMarkers() places standard map pins\n\naddCircleMarkers() draws scalable points on the map\n\nFor most data visualization tasks, addCircleMarkers() is preferred.\n\n\n\nleaflet(quakes) %&gt;%\n  addTiles() %&gt;%\n  addCircleMarkers(\n    lng = ~long,\n    lat = ~lat\n  )",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Mapping with `leaflet`</span>"
+    ]
+  },
+  {
+    "objectID": "leaflet.html#encode-size-with-magnitude",
+    "href": "leaflet.html#encode-size-with-magnitude",
+    "title": "\n7  Mapping with leaflet\n",
+    "section": "\n7.6 Encode Size with Magnitude",
+    "text": "7.6 Encode Size with Magnitude\n\n\n\n\n\n\nNoteKey Idea\n\n\n\nMarker size is one of the most effective ways to encode magnitude in a map.\n\n\n\nleaflet(quakes) %&gt;%\n  addTiles() %&gt;%\n  addCircleMarkers(\n    lng = ~long,\n    lat = ~lat,\n    radius = ~mag\n  )\n\n\n\n\n\n\n7.6.1 Scaling Marker Size\nRaw values are often too small or too large. Scale them for readability:\n\nleaflet(quakes) %&gt;%\n  addTiles() %&gt;%\n  addCircleMarkers(\n    lng = ~long,\n    lat = ~lat,\n    radius = ~mag * 2,   # simple scaling\n    fillOpacity = 0.7\n  )\n\n\n\n\n\nYou can also normalize:\n\nleaflet(quakes) %&gt;%\n  addTiles() %&gt;%\n  addCircleMarkers(\n    lng = ~long,\n    lat = ~lat,\n    radius = ~sqrt(mag) * 3,\n    fillOpacity = 0.7\n  )",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Mapping with `leaflet`</span>"
+    ]
+  },
+  {
+    "objectID": "leaflet.html#add-rich-popups-and-labels",
+    "href": "leaflet.html#add-rich-popups-and-labels",
+    "title": "\n7  Mapping with leaflet\n",
+    "section": "\n7.7 Add Rich Popups and Labels",
+    "text": "7.7 Add Rich Popups and Labels\n\nleaflet(quakes) %&gt;%\n  addTiles() %&gt;%\n  addCircleMarkers(\n    lng = ~long,\n    lat = ~lat,\n    radius = ~mag * 2,\n    popup = ~paste(\n      \"Magnitude:\", mag,\n      \"&lt;br&gt;Depth:\", depth\n    )\n  )",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Mapping with `leaflet`</span>"
+    ]
+  },
+  {
+    "objectID": "leaflet.html#use-color-intentionally",
+    "href": "leaflet.html#use-color-intentionally",
+    "title": "\n7  Mapping with leaflet\n",
+    "section": "\n7.8 Use Color Intentionally",
+    "text": "7.8 Use Color Intentionally\n\n\n\n\n\n\nTipColor Best Practices\n\n\n\n\nUse color to encode a meaningful variable\nEnsure contrast with the basemap\nAvoid too many categories\n\n\n\n\npal &lt;- colorNumeric(\n  palette = \"viridis\",\n  domain = quakes$mag\n)\n\nleaflet(quakes) %&gt;%\n  addTiles() %&gt;%\n  addCircleMarkers(\n    lng = ~long,\n    lat = ~lat,\n    radius = ~mag * 2,\n    color = ~pal(mag),\n    fillOpacity = 0.7\n  )",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Mapping with `leaflet`</span>"
+    ]
+  },
+  {
+    "objectID": "leaflet.html#add-a-legend",
+    "href": "leaflet.html#add-a-legend",
+    "title": "\n7  Mapping with leaflet\n",
+    "section": "\n7.9 Add a Legend",
+    "text": "7.9 Add a Legend\n\nleaflet(quakes) %&gt;%\n  addTiles() %&gt;%\n  addCircleMarkers(\n    lng = ~long,\n    lat = ~lat,\n    radius = ~mag * 2,\n    color = ~pal(mag),\n    fillOpacity = 0.7\n  ) %&gt;%\n  addLegend(\n    \"bottomright\",\n    pal = pal,\n    values = ~mag,\n    title = \"Magnitude\"\n  )",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Mapping with `leaflet`</span>"
+    ]
+  },
+  {
+    "objectID": "leaflet.html#adjust-the-view",
+    "href": "leaflet.html#adjust-the-view",
+    "title": "\n7  Mapping with leaflet\n",
+    "section": "\n7.10 Adjust the View",
+    "text": "7.10 Adjust the View\n\nleaflet() %&gt;%\n  addTiles() %&gt;%\n  setView(lng = -96.7970, lat = 32.7767, zoom = 10)",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Mapping with `leaflet`</span>"
+    ]
+  },
+  {
+    "objectID": "leaflet.html#change-the-basemap",
+    "href": "leaflet.html#change-the-basemap",
+    "title": "\n7  Mapping with leaflet\n",
+    "section": "\n7.11 Change the Basemap",
+    "text": "7.11 Change the Basemap\n\nleaflet() %&gt;%\n  addProviderTiles(providers$CartoDB.Positron)",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Mapping with `leaflet`</span>"
+    ]
+  },
+  {
+    "objectID": "leaflet.html#interactivity",
+    "href": "leaflet.html#interactivity",
+    "title": "\n7  Mapping with leaflet\n",
+    "section": "\n7.12 Interactivity",
+    "text": "7.12 Interactivity\n\n\n\n\n\n\nNoteWhy Use leaflet?\n\n\n\nUsers can: - zoom and pan - click for details - explore spatial patterns",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Mapping with `leaflet`</span>"
+    ]
+  },
+  {
+    "objectID": "leaflet.html#workflow",
+    "href": "leaflet.html#workflow",
+    "title": "\n7  Mapping with leaflet\n",
+    "section": "\n7.13 Workflow",
+    "text": "7.13 Workflow\n\n\n\n\n\n\nTipRecommended Approach\n\n\n\n\nStart with a basemap\n\nAdd points\n\nEncode magnitude with size\n\nAdd color and labels\n\nRefine view and legend",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Mapping with `leaflet`</span>"
+    ]
+  },
+  {
+    "objectID": "leaflet.html#summary",
+    "href": "leaflet.html#summary",
+    "title": "\n7  Mapping with leaflet\n",
+    "section": "\n7.14 Summary",
+    "text": "7.14 Summary\n\nUse radius to encode magnitude\n\nScale size for readability\n\nCombine size + color for clarity\n\nUse popups to avoid clutter",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Mapping with `leaflet`</span>"
+    ]
+  },
+  {
+    "objectID": "leaflet.html#exercise",
+    "href": "leaflet.html#exercise",
+    "title": "\n7  Mapping with leaflet\n",
+    "section": "\n7.15 Exercise",
+    "text": "7.15 Exercise\n\nleaflet(quakes) %&gt;%\n  addTiles() %&gt;%\n  addCircleMarkers(\n    lng = ~long,\n    lat = ~lat\n  )\n\n\n\n\n\nModify: - Scale radius by mag - Add color by mag - Add a popup",
+    "crumbs": [
+      "Building in R",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Mapping with `leaflet`</span>"
+    ]
+  },
+  {
     "objectID": "handson.html",
     "href": "handson.html",
     "title": "Hands-On Exercises",
