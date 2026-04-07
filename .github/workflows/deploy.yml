@@ -18,7 +18,7 @@ jobs:
       # Install missing R packages
       - name: Install R Packages
         run: |
-          Rscript -e "needed <- c('rmarkdown', 'tidyverse', 'quarto', 'leaflet');
+          Rscript -e "needed <- c('rmarkdown', 'tidyverse', 'quarto', 'plotly', 'leaflet');
                       installed <- rownames(installed.packages());
                       to_install <- setdiff(needed, installed);
                       if (length(to_install) > 0) install.packages(to_install)"
