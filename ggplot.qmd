@@ -1,1 +1,174 @@
 # Using `ggplot2`
+
+## Overview
+
+`ggplot2` is the primary visualization package in R. It is based on the **grammar of graphics**, a system for building plots by combining components.
+
+```r
+ggplot(data, aes(...)) +
+  geom_*()
+```
+
+- `data`: dataset  
+- `aes()`: maps variables to visual properties  
+- `geom_*()`: defines how data are drawn  
+- `+`: adds layers  
+
+## Basic Scatterplot
+
+```{r}
+library(ggplot2)
+
+ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point()
+```
+
+## Encode Additional Information
+
+```{r}
+ggplot(mtcars, aes(wt, mpg, color = factor(cyl))) +
+  geom_point()
+```
+
+## Aesthetic Mapping vs Fixed Values
+
+::: {.callout-note}
+### Key Rule
+
+Map variables inside `aes()`. Set constants outside `aes()`.
+:::
+
+```{r}
+ggplot(mtcars, aes(wt, mpg)) +
+  geom_point(color = "blue")
+```
+
+## Add Layers
+
+```{r}
+ggplot(mtcars, aes(wt, mpg)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
+```
+
+## Color Best Practices
+
+::: {.callout-tip}
+### Using Color Effectively
+
+- Use color to highlight important differences
+- Avoid overly bright or distracting palettes
+- Ensure sufficient contrast with the background
+- Consider color blindness (use accessible palettes)
+:::
+
+```{r}
+# Better color palette
+ggplot(mtcars, aes(wt, mpg, color = factor(cyl))) +
+  geom_point(size = 2) +
+  scale_color_brewer(palette = "Set1")
+```
+
+```{r}
+# Continuous color scale
+ggplot(mtcars, aes(wt, mpg, color = mpg)) +
+  geom_point(size = 2) +
+  scale_color_viridis_c()
+```
+
+## Improve Labels and Readability
+
+```{r}
+ggplot(mtcars, aes(wt, mpg)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(
+    title = "Fuel Efficiency vs Weight",
+    x = "Weight",
+    y = "Miles per Gallon"
+  )
+```
+
+## Step 7: Themes
+
+Themes control the overall appearance of your plot.
+
+```{r}
+ggplot(mtcars, aes(wt, mpg)) +
+  geom_point() +
+  theme_minimal()
+```
+
+```{r}
+ggplot(mtcars, aes(wt, mpg)) +
+  geom_point() +
+  theme_classic()
+```
+
+### Customizing Themes
+
+```{r}
+ggplot(mtcars, aes(wt, mpg)) +
+  geom_point() +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(size = 14, face = "bold"),
+    axis.title = element_text(size = 12)
+  )
+```
+
+## Step 8: Compare Groups with Faceting
+
+```{r}
+ggplot(mtcars, aes(wt, mpg)) +
+  geom_point() +
+  facet_wrap(~ cyl)
+```
+
+## Common Geometries
+
+```{r}
+ggplot(mtcars, aes(wt, mpg)) + geom_point()
+ggplot(mtcars, aes(factor(cyl))) + geom_bar()
+ggplot(mtcars, aes(mpg)) + geom_histogram(bins = 10)
+ggplot(mtcars, aes(factor(cyl), mpg)) + geom_boxplot()
+```
+
+## Workflow
+
+::: {.callout-tip}
+### Recommended Approach
+
+1. Start simple  
+2. Confirm it answers your question  
+3. Add layers  
+4. Improve clarity and aesthetics  
+:::
+
+
+
+## Summary
+
+- Build plots with `ggplot(data, aes(...))`  
+- Add layers with `+`  
+- Map variables inside `aes()`  
+- Use color intentionally  
+- Use themes to improve readability  
+
+
+
+## Exercise
+
+Starting with the following plot, do the following:
+
+- Color by `am`  
+- Add a smooth line  
+- Apply a different theme  
+- Use a color palette
+
+```{r}
+ggplot(mtcars, aes(wt, mpg)) +
+  geom_point()
+```
+
+

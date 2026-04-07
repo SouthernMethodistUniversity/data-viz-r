@@ -1,1 +1,267 @@
 # Mapping with `leaflet`
+
+## Overview
+
+`leaflet` is an R package for building interactive maps. It is especially useful when your data include locations, coordinates, regions, or boundaries and you want viewers to explore the map directly.
+
+```r
+leaflet(data = ...) %>%
+  addTiles() %>%
+  add*()
+```
+
+- `data`: dataset  
+- `leaflet()`: initializes the map  
+- `addTiles()`: adds a basemap  
+- `add*()`: adds markers, circles, polygons, or other layers  
+- `%>%`: builds the map step by step  
+
+---
+
+## Basic Map
+
+```{r}
+library(leaflet)
+
+leaflet() %>%
+  addTiles()
+```
+
+---
+
+## Add a Single Marker
+
+```{r}
+leaflet() %>%
+  addTiles() %>%
+  addMarkers(
+    lng = -96.7970,
+    lat = 32.7767,
+    popup = "Dallas, Texas"
+  )
+```
+
+---
+
+## Map Data from a Dataset
+
+```{r}
+leaflet(quakes) %>%
+  addTiles() %>%
+  addMarkers(
+    lng = ~long,
+    lat = ~lat
+  )
+```
+
+---
+
+## Markers vs Circle Markers
+
+::: {.callout-note}
+### Key Distinction
+
+- `addMarkers()` places standard map pins
+- `addCircleMarkers()` draws scalable points on the map
+
+For most data visualization tasks, `addCircleMarkers()` is preferred.
+:::
+
+```{r}
+leaflet(quakes) %>%
+  addTiles() %>%
+  addCircleMarkers(
+    lng = ~long,
+    lat = ~lat
+  )
+```
+
+---
+
+## Encode Size with Magnitude
+
+::: {.callout-note}
+### Key Idea
+
+Marker size is one of the most effective ways to encode magnitude in a map.
+:::
+
+```{r}
+leaflet(quakes) %>%
+  addTiles() %>%
+  addCircleMarkers(
+    lng = ~long,
+    lat = ~lat,
+    radius = ~mag
+  )
+```
+
+### Scaling Marker Size
+
+Raw values are often too small or too large. Scale them for readability:
+
+```{r}
+leaflet(quakes) %>%
+  addTiles() %>%
+  addCircleMarkers(
+    lng = ~long,
+    lat = ~lat,
+    radius = ~mag * 2,   # simple scaling
+    fillOpacity = 0.7
+  )
+```
+
+You can also normalize:
+
+```{r}
+leaflet(quakes) %>%
+  addTiles() %>%
+  addCircleMarkers(
+    lng = ~long,
+    lat = ~lat,
+    radius = ~sqrt(mag) * 3,
+    fillOpacity = 0.7
+  )
+```
+
+---
+
+## Add Rich Popups and Labels
+
+```{r}
+leaflet(quakes) %>%
+  addTiles() %>%
+  addCircleMarkers(
+    lng = ~long,
+    lat = ~lat,
+    radius = ~mag * 2,
+    popup = ~paste(
+      "Magnitude:", mag,
+      "<br>Depth:", depth
+    )
+  )
+```
+
+---
+
+## Use Color Intentionally
+
+::: {.callout-tip}
+### Color Best Practices
+
+- Use color to encode a meaningful variable
+- Ensure contrast with the basemap
+- Avoid too many categories
+:::
+
+```{r}
+pal <- colorNumeric(
+  palette = "viridis",
+  domain = quakes$mag
+)
+
+leaflet(quakes) %>%
+  addTiles() %>%
+  addCircleMarkers(
+    lng = ~long,
+    lat = ~lat,
+    radius = ~mag * 2,
+    color = ~pal(mag),
+    fillOpacity = 0.7
+  )
+```
+
+---
+
+## Add a Legend
+
+```{r}
+leaflet(quakes) %>%
+  addTiles() %>%
+  addCircleMarkers(
+    lng = ~long,
+    lat = ~lat,
+    radius = ~mag * 2,
+    color = ~pal(mag),
+    fillOpacity = 0.7
+  ) %>%
+  addLegend(
+    "bottomright",
+    pal = pal,
+    values = ~mag,
+    title = "Magnitude"
+  )
+```
+
+---
+
+## Adjust the View
+
+```{r}
+leaflet() %>%
+  addTiles() %>%
+  setView(lng = -96.7970, lat = 32.7767, zoom = 10)
+```
+
+---
+
+## Change the Basemap
+
+```{r}
+leaflet() %>%
+  addProviderTiles(providers$CartoDB.Positron)
+```
+
+---
+
+## Interactivity
+
+::: {.callout-note}
+### Why Use `leaflet`?
+
+Users can:
+- zoom and pan
+- click for details
+- explore spatial patterns
+:::
+
+---
+
+## Workflow
+
+::: {.callout-tip}
+### Recommended Approach
+
+1. Start with a basemap  
+2. Add points  
+3. Encode magnitude with size  
+4. Add color and labels  
+5. Refine view and legend  
+:::
+
+---
+
+## Summary
+
+- Use `radius` to encode magnitude  
+- Scale size for readability  
+- Combine size + color for clarity  
+- Use popups to avoid clutter  
+
+---
+
+## Exercise
+
+```{r}
+leaflet(quakes) %>%
+  addTiles() %>%
+  addCircleMarkers(
+    lng = ~long,
+    lat = ~lat
+  )
+```
+
+Modify:
+- Scale radius by `mag`
+- Add color by `mag`
+- Add a popup

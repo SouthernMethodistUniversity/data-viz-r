@@ -1,1 +1,283 @@
-# Using `plotly`
+# Interactivity with `plotly`
+
+## Overview
+
+`plotly` is a package for building **interactive** visualizations in R. It is especially useful when you want users to hover, zoom, pan, filter visually, and explore the data on their own.
+
+```r
+plot_ly(data = ..., x = ..., y = ..., type = ..., mode = ...)
+```
+
+- `data`: dataset  
+- `x`, `y`: variables mapped to axes  
+- `type`: general chart type  
+- `mode`: how marks are drawn  
+- `%>%`: adds layers and layout options  
+
+## Basic Scatterplot
+
+```{r}
+library(plotly)
+
+plot_ly(
+  data = mtcars,
+  x = ~wt,
+  y = ~mpg,
+  type = "scatter",
+  mode = "markers"
+)
+```
+
+## Why Use `plotly`?
+
+::: {.callout-note}
+### Key Advantage
+
+The main reason to use `plotly` is interactivity.
+
+Users can:
+- hover for details
+- zoom into regions
+- pan across the figure
+- toggle traces on and off
+- explore patterns without changing the code
+:::
+
+## Encode Additional Information
+
+```{r}
+plot_ly(
+  data = mtcars,
+  x = ~wt,
+  y = ~mpg,
+  color = ~factor(cyl),
+  type = "scatter",
+  mode = "markers"
+)
+```
+
+## Mapping vs Fixed Values
+
+::: {.callout-note}
+### Key Rule
+
+Map variables with `~variable`. Set constants directly.
+:::
+
+```{r}
+plot_ly(
+  data = mtcars,
+  x = ~wt,
+  y = ~mpg,
+  type = "scatter",
+  mode = "markers",
+  marker = list(color = "blue")
+)
+```
+
+## Add Rich Hover Information
+
+```{r}
+plot_ly(
+  data = mtcars,
+  x = ~wt,
+  y = ~mpg,
+  type = "scatter",
+  mode = "markers",
+  text = ~paste(
+    "Model:", rownames(mtcars),
+    "<br>MPG:", mpg,
+    "<br>Weight:", wt,
+    "<br>Cylinders:", cyl
+  ),
+  hoverinfo = "text"
+)
+```
+
+Hover text is one of the most useful features in `plotly`. It lets you keep the figure clean while still giving viewers access to more detail.
+
+## Add Multiple Traces
+
+```{r}
+plot_ly(data = mtcars, x = ~wt, y = ~mpg, type = "scatter", mode = "markers") %>%
+  add_lines(y = ~fitted(lm(mpg ~ wt, data = mtcars)), name = "Trend line")
+```
+
+Interactive plots are often built by adding traces instead of layering geoms.
+
+## Color Best Practices
+
+::: {.callout-tip}
+### Using Color Effectively
+
+- Use color to distinguish meaningful groups
+- Avoid using too many categories at once
+- Keep contrast strong enough for readability
+- Use accessible palettes when possible
+:::
+
+```{r}
+plot_ly(
+  data = mtcars,
+  x = ~wt,
+  y = ~mpg,
+  color = ~factor(cyl),
+  colors = "Set1",
+  type = "scatter",
+  mode = "markers"
+)
+```
+
+```{r}
+plot_ly(
+  data = mtcars,
+  x = ~wt,
+  y = ~mpg,
+  color = ~mpg,
+  colors = "viridis",
+  type = "scatter",
+  mode = "markers"
+)
+```
+
+## Improve Labels and Layout
+
+```{r}
+plot_ly(
+  data = mtcars,
+  x = ~wt,
+  y = ~mpg,
+  type = "scatter",
+  mode = "markers"
+) %>%
+  layout(
+    title = "Fuel Efficiency vs Weight",
+    xaxis = list(title = "Weight"),
+    yaxis = list(title = "Miles per Gallon")
+  )
+```
+
+## Styling and Theming
+
+In `plotly`, overall appearance is usually controlled through `layout()` rather than a theme system like `ggplot2`.
+
+```{r}
+plot_ly(
+  data = mtcars,
+  x = ~wt,
+  y = ~mpg,
+  type = "scatter",
+  mode = "markers"
+) %>%
+  layout(
+    title = "Fuel Efficiency vs Weight",
+    paper_bgcolor = "white",
+    plot_bgcolor = "white",
+    xaxis = list(showgrid = FALSE),
+    yaxis = list(showgrid = FALSE)
+  )
+```
+
+### Custom Marker Styling
+
+```{r}
+plot_ly(
+  data = mtcars,
+  x = ~wt,
+  y = ~mpg,
+  type = "scatter",
+  mode = "markers",
+  marker = list(
+    size = 10,
+    opacity = 0.7
+  )
+)
+```
+
+## Compare Groups
+
+```{r}
+plot_ly(
+  data = mtcars,
+  x = ~wt,
+  y = ~mpg,
+  color = ~factor(cyl),
+  type = "scatter",
+  mode = "markers"
+)
+```
+
+A common interactive alternative to faceting is to let users isolate groups by clicking the legend.
+
+## Common Chart Types
+
+```{r}
+# Scatterplot
+plot_ly(mtcars, x = ~wt, y = ~mpg, type = "scatter", mode = "markers")
+
+# Line chart
+plot_ly(economics, x = ~date, y = ~unemploy, type = "scatter", mode = "lines")
+
+# Bar chart
+plot_ly(mtcars, x = ~factor(cyl), type = "histogram")
+
+# Histogram
+plot_ly(mtcars, x = ~mpg, type = "histogram")
+
+# Boxplot
+plot_ly(mtcars, x = ~factor(cyl), y = ~mpg, type = "box")
+```
+
+## A Brief Note on `ggplotly()`
+
+`plotly` can convert a `ggplot2` graphic into an interactive figure with `ggplotly()`.
+
+```{r}
+library(ggplot2)
+
+p <- ggplot(mtcars, aes(wt, mpg)) +
+  geom_point()
+
+ggplotly(p)
+```
+
+This can be useful for quick conversions, but when interactivity is the goal, it is often better to build the plot directly with `plotly`.
+
+## Workflow
+
+::: {.callout-tip}
+### Recommended Approach
+
+1. Start with the simplest interactive chart
+2. Decide what users should be able to explore
+3. Add hover text, labels, and traces
+4. Refine layout for readability
+:::
+
+## Summary
+
+- Build interactive plots with `plot_ly()`
+- Use hover, zoom, and legend interaction intentionally
+- Map variables with `~`
+- Use `layout()` to control appearance
+- Build directly in `plotly` when interactivity is the main goal
+
+## Exercise
+
+Starting with the following plot, do the following:
+
+- Color by `am`
+- Add custom hover text
+- Add a trend line
+- Improve the layout
+
+```{r}
+plot_ly(
+  data = mtcars,
+  x = ~wt,
+  y = ~mpg,
+  type = "scatter",
+  mode = "markers"
+)
+```
+
