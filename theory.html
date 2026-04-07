@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.8.25">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="author" content="SMU OIT Research Technology Services">
-
 <title>2&nbsp; Theory – Effective Data Visualization in R</title>
 <style>
 code{white-space: pre-wrap;}
@@ -22,7 +19,6 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 </style>
-
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
@@ -42,8 +38,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-677bb2f131c9b21e33ed75076641453a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap-677bb2f131c9b21e33ed75076641453a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -70,16 +65,11 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-
-
 </head>
-
 <body class="nav-sidebar floating quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
@@ -90,17 +80,11 @@ ul.task-list li input[type="checkbox"] {
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="./index.html" class="sidebar-logo-link">
-      <img src="./images/logo_stack.svg" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
-      <img src="./images/logo_stack.svg" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
-      </a>
+      <img src="./images/logo_stack.svg" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none"><img src="./images/logo_stack.svg" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none"></a>
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Effective Data Visualization in R</a> 
         <div class="sidebar-tools-main">
@@ -115,7 +99,7 @@ ul.task-list li input[type="checkbox"] {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Welcome</span></a>
@@ -129,8 +113,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./why.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Why Visualize?</span></span></a>
@@ -149,7 +133,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
@@ -158,8 +142,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./method.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">The Method</span></span></a>
@@ -184,7 +168,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./handson.html" class="sidebar-item-text sidebar-link">
@@ -193,15 +177,15 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./solutions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Solutions</span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./next_steps.html" class="sidebar-item-text sidebar-link">
@@ -209,19 +193,30 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+<li><a href="#the-data-ink-ratio" id="toc-the-data-ink-ratio" class="nav-link active" data-scroll-target="#the-data-ink-ratio"><span class="header-section-number">2.1</span> The Data-Ink Ratio</a></li>
+  <li>
+<a href="#colors-and-fonts" id="toc-colors-and-fonts" class="nav-link" data-scroll-target="#colors-and-fonts"><span class="header-section-number">2.2</span> Colors and Fonts</a>
+  <ul class="collapse">
+<li><a href="#bad-example" id="toc-bad-example" class="nav-link" data-scroll-target="#bad-example"><span class="header-section-number">2.2.1</span> Bad Example</a></li>
+  <li><a href="#good-example-branded" id="toc-good-example-branded" class="nav-link" data-scroll-target="#good-example-branded"><span class="header-section-number">2.2.2</span> Good Example (Branded)</a></li>
+  <li><a href="#best-example-neutral" id="toc-best-example-neutral" class="nav-link" data-scroll-target="#best-example-neutral"><span class="header-section-number">2.2.3</span> Best Example (Neutral)</a></li>
+  </ul>
+</li>
+  <li><a href="#smu-brand-guidelines" id="toc-smu-brand-guidelines" class="nav-link" data-scroll-target="#smu-brand-guidelines"><span class="header-section-number">2.3</span> SMU Brand Guidelines</a></li>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/SouthernMethodistUniversity/data-viz-r/edit/main/theory.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SouthernMethodistUniversity/data-viz-r/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./why.html">Foundations</a></li><li class="breadcrumb-item"><a href="./theory.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Theory</span></a></li></ol></nav>
-<div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Theory</span></h1>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./why.html">Foundations</a></li><li class="breadcrumb-item"><a href="./theory.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Theory</span></a></li></ol></nav><div class="quarto-title">
+<h1 class="title">
+<span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Theory</span>
+</h1>
 </div>
 
 
@@ -235,14 +230,235 @@ ul.task-list li input[type="checkbox"] {
   
 
 
-</header>
+</header><blockquote class="blockquote">
+<p>“Graphical excellence is that which gives to the viewer the greatest number of ideas in the shortest time with the least ink in the smallest space.”</p>
+<p>— Edward Tufte, The Visual Display of Quantitative Information (2nd ed.)</p>
+</blockquote>
+<section id="the-data-ink-ratio" class="level2" data-number="2.1"><h2 data-number="2.1" class="anchored" data-anchor-id="the-data-ink-ratio">
+<span class="header-section-number">2.1</span> The Data-Ink Ratio</h2>
+<p>The data-ink ratio, proposed in Edward Tufte’s <em><a href="https://www.edwardtufte.com/book/the-visual-display-of-quantitative-information/">The Visual Display of Quantitative Information (2nd ed.)</a></em> is a very helpful concept to avoid unnecessary noise in your plots:</p>
+<p><img src="./images/dataink.png" class="img-fluid"></p>
+<p>The goal of the data-ink ratio is 5-fold:</p>
+<blockquote class="blockquote">
+<ol type="1">
+<li>Above all else show the data.</li>
+<li>Maximize the data-ink ratio.</li>
+<li>Erase non-data-ink.</li>
+<li>Erase redundant data-ink.</li>
+<li>Revise and edit.</li>
+</ol>
+</blockquote>
+<p>Here is an example of a <strong>low data-ink</strong> ratio plot that could use some cleaning up. Admittedly, this is a bit exaggerated, but its not far off from what is found in many scientific publications:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="theory_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>A few aspects of this plot can be adjusted:</p>
+<ul>
+<li>Do we need thick, multi-colored bars to convey our information?</li>
+<li>Do grid lines add anything to the plot?</li>
+<li>Does the legend add anything to the plot?</li>
+<li>Does the axis labels add anything to the plot?</li>
+</ul>
+<p>Here is an example of the same data, but with a <strong>maximized data-ink</strong> ratio:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="theory_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="colors-and-fonts" class="level2" data-number="2.2"><h2 data-number="2.2" class="anchored" data-anchor-id="colors-and-fonts">
+<span class="header-section-number">2.2</span> Colors and Fonts</h2>
+<p>Two of the most important design choices in a visualization are color and typography. These choices can either support the data or distract from it.</p>
+<div class="cell">
+<style type="text/css">
+.bad-demo {
+  background: #CC0035;
+  color: #354CA1;
+  padding: 1.2rem;
+  border: 4px dashed #59C3C3;
+  font-family: "Comic Sans MS", "Courier New", cursive;
+  line-height: 1.1;
+}
+
+.bad-demo h3 {
+  color: #F9C80E;
+  text-transform: uppercase;
+}
+
+.bad-demo p, .bad-demo li {
+  font-size: 0.75rem;
+}
+
+.bad-title {
+  font-family: "Papyrus", fantasy;
+  font-size: 1.4rem;
+}
+
+.bad-body {
+  font-family: "Courier New", monospace;
+}
+
+.bad-emphasis-1 {
+  font-family: "Times New Roman", serif;
+  font-style: italic;
+}
+
+.bad-emphasis-2 {
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.bad-emphasis-3 {
+  font-family: "Brush Script MT", cursive;
+}
+
+.good-demo {
+  background: #354CA1;
+  color: #ffffff;
+  padding: 0.05rem 1rem 1rem 1rem;
+  border-radius: 8px;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  line-height: 1.5;
+}
+
+.good-demo h3 {
+  color: #ffffff;
+}
+
+.best-demo {
+  background: #f8f9fa;
+  color: #222222;
+  padding: 0.05rem 1rem 1rem 1rem;
+  border-radius: 8px;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  line-height: 1.5;
+}
+
+.best-demo h3 {
+  color: #111111;
+}
+</style>
+</div>
+<section id="bad-example" class="level3" data-number="2.2.1"><h3 data-number="2.2.1" class="anchored" data-anchor-id="bad-example">
+<span class="header-section-number">2.2.1</span> Bad Example</h3>
+<div class="bad-demo">
+<div class="bad-title">
+Color
+</div>
+<div class="bad-body">
+<p>Color should be used intentionally. Its main job is not to decorate the plot, but to help the viewer understand what matters.</p>
+</div>
+<div class="bad-emphasis-2">
+A few useful guidelines:
+</div>
+<ol class="bad-body">
+<li>
+<span class="bad-emphasis-1">Use color to highlight important parts of the data.</span><br>
+Color is most effective when it draws attention to a key pattern, category, or comparison rather than coloring everything equally.
+</li>
+<li>
+<span class="bad-emphasis-3">Avoid flashy colors, and make sure contrast to the background isn’t harsh.</span><br>
+Extremely bright or saturated colors can be distracting. Softer, deliberate color choices are usually easier to look at and help keep the focus on the data.
+</li>
+<li>
+<span class="bad-emphasis-2">When you have to stick to poor branding, capitalize on using blacks and whites.</span><br>
+If required institutional or brand colors are not ideal for data visualization, neutral tones can help balance the design and reduce visual clutter.
+</li>
+<li>
+<span class="bad-emphasis-1">Make considerations for color blindness.</span> Avoid relying on color alone to communicate meaning. When possible, use accessible palettes and reinforce distinctions with labels, position, or shape.
+</li>
+</ol>
+<div class="bad-title">
+Font
+</div>
+<div class="bad-body">
+<p>Typography should support readability and visual hierarchy without calling attention to itself.</p>
+</div>
+<div class="bad-emphasis-2">
+Some general principles:
+</div>
+<ol class="bad-body">
+<li>
+<span class="bad-emphasis-3">The default is usually fine.</span><br>
+You rarely need a special font to make a good chart. Clear and familiar fonts are often the best choice.
+</li>
+<li>
+<span class="bad-emphasis-1">Use italics, bolding, caps, and size instead of multiple fonts.</span><br>
+These tools are usually enough to create emphasis and structure while keeping the design consistent.
+</li>
+<li>
+<span class="bad-emphasis-2">Use a color that contrasts your background, usually black or white.</span><br>
+Text should be easy to read at a glance. In most cases, high-contrast text is the safest and clearest option.
+</li>
+<li>
+<span class="bad-emphasis-3">Don’t make your text so small that it’s hard to read.</span> Labels, titles, and annotations are only useful if your audience can comfortably read them.
+</li>
+</ol>
+<div class="bad-body">
+<p>Good use of color and font should feel almost invisible: they should guide attention, improve clarity, and stay out of the way of the data.</p>
+</div>
+</div>
+<hr></section><section id="good-example-branded" class="level3" data-number="2.2.2"><h3 data-number="2.2.2" class="anchored" data-anchor-id="good-example-branded">
+<span class="header-section-number">2.2.2</span> Good Example (Branded)</h3>
+</section><div class="good-demo">
+<section id="color" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="color">Color</h3>
+<p>Color should be used intentionally. Its main job is not to decorate the plot, but to help the viewer understand what matters.</p>
+<p>A few useful guidelines:</p>
+<ol type="1">
+<li><p><strong>Use color to highlight important parts of the data.</strong> Color is most effective when it draws attention to a key pattern, category, or comparison rather than coloring everything equally.</p></li>
+<li><p><strong>Avoid flashy colors, and make sure contrast with the background is not too harsh.</strong> Extremely bright or saturated colors can be distracting. Softer, deliberate color choices are usually easier to look at and help keep the focus on the data.</p></li>
+<li><p><strong>When you have to stick to poor branding choices, make use of black, white, and grayscale.</strong> If required institutional or brand colors are not ideal for data visualization, neutral tones can help balance the design and reduce visual clutter.</p></li>
+<li><p><strong>Make considerations for color blindness.</strong> Avoid relying on color alone to communicate meaning. When possible, use accessible palettes and reinforce distinctions with labels, position, or shape.</p></li>
+</ol></section><section id="font" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="font">Font</h3>
+<p>Typography should support readability and visual hierarchy without calling attention to itself.</p>
+<p>Some general principles:</p>
+<ol type="1">
+<li><p><strong>The default is usually fine.</strong> You rarely need a special font to make a good chart. Clear and familiar fonts are often the best choice.</p></li>
+<li><p><strong>Use italics, bolding, capitalization, and size before introducing multiple fonts.</strong> These tools are usually enough to create emphasis and structure while keeping the design consistent.</p></li>
+<li><p><strong>Use a font color that contrasts with the background, usually black or white.</strong> Text should be easy to read at a glance. In most cases, high-contrast text is the safest and clearest option.</p></li>
+<li><p><strong>Do not make your text so small that it becomes hard to read.</strong> Labels, titles, and annotations are only useful if your audience can comfortably read them.</p></li>
+</ol>
+<p>Good use of color and font should feel almost invisible: they should guide attention, improve clarity, and stay out of the way of the data.</p>
+</section>
+</div>
+<section id="best-example-neutral" class="level3" data-number="2.2.3"><h3 data-number="2.2.3" class="anchored" data-anchor-id="best-example-neutral">
+<span class="header-section-number">2.2.3</span> Best Example (Neutral)</h3>
+</section><div class="best-demo">
+<section id="color-1" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="color-1">Color</h3>
+<p>Color should be used intentionally. Its main job is not to decorate the plot, but to help the viewer understand what matters.</p>
+<p>A few useful guidelines:</p>
+<ol type="1">
+<li><p><strong>Use color to highlight important parts of the data.</strong> Color is most effective when it draws attention to a key pattern, category, or comparison rather than coloring everything equally.</p></li>
+<li><p><strong>Avoid flashy colors, and make sure contrast with the background is not too harsh.</strong> Extremely bright or saturated colors can be distracting. Softer, deliberate color choices are usually easier to look at and help keep the focus on the data.</p></li>
+<li><p><strong>When you have to stick to poor branding choices, make use of black, white, and grayscale.</strong> If required institutional or brand colors are not ideal for data visualization, neutral tones can help balance the design and reduce visual clutter.</p></li>
+<li><p><strong>Make considerations for color blindness.</strong> Avoid relying on color alone to communicate meaning. When possible, use accessible palettes and reinforce distinctions with labels, position, or shape.</p></li>
+</ol></section><section id="font-1" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="font-1">Font</h3>
+<p>Typography should support readability and visual hierarchy without calling attention to itself.</p>
+<p>Some general principles:</p>
+<ol type="1">
+<li><p><strong>The default is usually fine.</strong> You rarely need a special font to make a good chart. Clear and familiar fonts are often the best choice.</p></li>
+<li><p><strong>Use italics, bolding, capitalization, and size before introducing multiple fonts.</strong> These tools are usually enough to create emphasis and structure while keeping the design consistent.</p></li>
+<li><p><strong>Use a font color that contrasts with the background, usually black or white.</strong> Text should be easy to read at a glance. In most cases, high-contrast text is the safest and clearest option.</p></li>
+<li><p><strong>Do not make your text so small that it becomes hard to read.</strong> Labels, titles, and annotations are only useful if your audience can comfortably read them.</p></li>
+</ol>
+<p>Good use of color and font should feel almost invisible: they should guide attention, improve clarity, and stay out of the way of the data.</p>
+</section>
+</div>
+</section><section id="smu-brand-guidelines" class="level2" data-number="2.3"><h2 data-number="2.3" class="anchored" data-anchor-id="smu-brand-guidelines">
+<span class="header-section-number">2.3</span> SMU Brand Guidelines</h2>
+<p>SMU Marketing and Communications publishes brand guidelines that should be used for any public-facing marketing content. Even for internal products, following brand guidelines is always a good idea, as long as it doesn’t take away from the visualization. Some journals may also have brand guidelines you need to follow.</p>
+<p>SMU Brand Guidelines: <a href="https://www.smu.edu/brand">https://www.smu.edu/brand</a></p>
 
 
-
-
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -641,9 +857,7 @@ ul.task-list li input[type="checkbox"] {
       }
     }
   });
-  </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="./why.html" class="pagination-link" aria-label="Why Visualize?">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Why Visualize?</span></span>
       </a>          
@@ -655,21 +869,18 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
       &nbsp;
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/SouthernMethodistUniversity/data-viz-r/edit/main/theory.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SouthernMethodistUniversity/data-viz-r/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/SouthernMethodistUniversity/data-viz-r/edit/main/theory.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SouthernMethodistUniversity/data-viz-r/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p><a href="http://creativecommons.org/licenses/by-sa/4.0/"><img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a></p>
 </div>
   </div>
 </footer>
-
-
 
 
 </body></html>

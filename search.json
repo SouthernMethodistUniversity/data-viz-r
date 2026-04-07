@@ -45,7 +45,7 @@
     "href": "why.html#the-datasaurus-dozen",
     "title": "1  Why Visualize?",
     "section": "1.2 The Datasaurus Dozen",
-    "text": "1.2 The Datasaurus Dozen\nAnother classic, slightly more fun example is the Datasaurus Dozen, which all have the same statistical properties:",
+    "text": "1.2 The Datasaurus Dozen\nAnother classic, slightly more fun example is the Datasaurus Dozen, which all have the same statistical properties:\n\nTo see more: https://www.research.autodesk.com/publications/same-stats-different-graphs/",
     "crumbs": [
       "Foundations",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Why Visualize?</span>"
@@ -56,10 +56,87 @@
     "href": "why.html#summary",
     "title": "1  Why Visualize?",
     "section": "1.3 Summary",
-    "text": "1.3 Summary\n\nTo efficiently communicate ideas\nSome patterns can only be seen visually\nAesthetics sell better than facts\nTo make data more ingestible",
+    "text": "1.3 Summary\n\nTo efficiently communicate ideas\nSome patterns can only be seen visually\nAesthetics sell better than facts. See this paper on the aesthetic fidelity effect.\nTo make data more ingestible",
     "crumbs": [
       "Foundations",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Why Visualize?</span>"
+    ]
+  },
+  {
+    "objectID": "theory.html",
+    "href": "theory.html",
+    "title": "\n2  Theory\n",
+    "section": "",
+    "text": "2.1 The Data-Ink Ratio\nThe data-ink ratio, proposed in Edward Tufte’s The Visual Display of Quantitative Information (2nd ed.) is a very helpful concept to avoid unnecessary noise in your plots:\nThe goal of the data-ink ratio is 5-fold:\nHere is an example of a low data-ink ratio plot that could use some cleaning up. Admittedly, this is a bit exaggerated, but its not far off from what is found in many scientific publications:\nA few aspects of this plot can be adjusted:\nHere is an example of the same data, but with a maximized data-ink ratio:",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Theory</span>"
+    ]
+  },
+  {
+    "objectID": "theory.html#the-data-ink-ratio",
+    "href": "theory.html#the-data-ink-ratio",
+    "title": "\n2  Theory\n",
+    "section": "",
+    "text": "Above all else show the data.\nMaximize the data-ink ratio.\nErase non-data-ink.\nErase redundant data-ink.\nRevise and edit.\n\n\n\n\n\n\nDo we need thick, multi-colored bars to convey our information?\nDo grid lines add anything to the plot?\nDoes the legend add anything to the plot?\nDoes the axis labels add anything to the plot?",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Theory</span>"
+    ]
+  },
+  {
+    "objectID": "theory.html#colors-and-fonts",
+    "href": "theory.html#colors-and-fonts",
+    "title": "\n2  Theory\n",
+    "section": "\n2.2 Colors and Fonts",
+    "text": "2.2 Colors and Fonts\nTwo of the most important design choices in a visualization are color and typography. These choices can either support the data or distract from it.\n\n\n\n\n2.2.1 Bad Example\n\n\nColor\n\n\nColor should be used intentionally. Its main job is not to decorate the plot, but to help the viewer understand what matters.\n\n\nA few useful guidelines:\n\n\n\nUse color to highlight important parts of the data.\nColor is most effective when it draws attention to a key pattern, category, or comparison rather than coloring everything equally.\n\n\nAvoid flashy colors, and make sure contrast to the background isn’t harsh.\nExtremely bright or saturated colors can be distracting. Softer, deliberate color choices are usually easier to look at and help keep the focus on the data.\n\n\nWhen you have to stick to poor branding, capitalize on using blacks and whites.\nIf required institutional or brand colors are not ideal for data visualization, neutral tones can help balance the design and reduce visual clutter.\n\n\nMake considerations for color blindness. Avoid relying on color alone to communicate meaning. When possible, use accessible palettes and reinforce distinctions with labels, position, or shape.\n\n\n\nFont\n\n\nTypography should support readability and visual hierarchy without calling attention to itself.\n\n\nSome general principles:\n\n\n\nThe default is usually fine.\nYou rarely need a special font to make a good chart. Clear and familiar fonts are often the best choice.\n\n\nUse italics, bolding, caps, and size instead of multiple fonts.\nThese tools are usually enough to create emphasis and structure while keeping the design consistent.\n\n\nUse a color that contrasts your background, usually black or white.\nText should be easy to read at a glance. In most cases, high-contrast text is the safest and clearest option.\n\n\nDon’t make your text so small that it’s hard to read. Labels, titles, and annotations are only useful if your audience can comfortably read them.\n\n\n\nGood use of color and font should feel almost invisible: they should guide attention, improve clarity, and stay out of the way of the data.\n\n\n\n2.2.2 Good Example (Branded)\n\nColor\nColor should be used intentionally. Its main job is not to decorate the plot, but to help the viewer understand what matters.\nA few useful guidelines:\n\nUse color to highlight important parts of the data. Color is most effective when it draws attention to a key pattern, category, or comparison rather than coloring everything equally.\nAvoid flashy colors, and make sure contrast with the background is not too harsh. Extremely bright or saturated colors can be distracting. Softer, deliberate color choices are usually easier to look at and help keep the focus on the data.\nWhen you have to stick to poor branding choices, make use of black, white, and grayscale. If required institutional or brand colors are not ideal for data visualization, neutral tones can help balance the design and reduce visual clutter.\nMake considerations for color blindness. Avoid relying on color alone to communicate meaning. When possible, use accessible palettes and reinforce distinctions with labels, position, or shape.\nFont\nTypography should support readability and visual hierarchy without calling attention to itself.\nSome general principles:\n\nThe default is usually fine. You rarely need a special font to make a good chart. Clear and familiar fonts are often the best choice.\nUse italics, bolding, capitalization, and size before introducing multiple fonts. These tools are usually enough to create emphasis and structure while keeping the design consistent.\nUse a font color that contrasts with the background, usually black or white. Text should be easy to read at a glance. In most cases, high-contrast text is the safest and clearest option.\nDo not make your text so small that it becomes hard to read. Labels, titles, and annotations are only useful if your audience can comfortably read them.\n\nGood use of color and font should feel almost invisible: they should guide attention, improve clarity, and stay out of the way of the data.\n\n\n\n2.2.3 Best Example (Neutral)\n\nColor\nColor should be used intentionally. Its main job is not to decorate the plot, but to help the viewer understand what matters.\nA few useful guidelines:\n\nUse color to highlight important parts of the data. Color is most effective when it draws attention to a key pattern, category, or comparison rather than coloring everything equally.\nAvoid flashy colors, and make sure contrast with the background is not too harsh. Extremely bright or saturated colors can be distracting. Softer, deliberate color choices are usually easier to look at and help keep the focus on the data.\nWhen you have to stick to poor branding choices, make use of black, white, and grayscale. If required institutional or brand colors are not ideal for data visualization, neutral tones can help balance the design and reduce visual clutter.\nMake considerations for color blindness. Avoid relying on color alone to communicate meaning. When possible, use accessible palettes and reinforce distinctions with labels, position, or shape.\nFont\nTypography should support readability and visual hierarchy without calling attention to itself.\nSome general principles:\n\nThe default is usually fine. You rarely need a special font to make a good chart. Clear and familiar fonts are often the best choice.\nUse italics, bolding, capitalization, and size before introducing multiple fonts. These tools are usually enough to create emphasis and structure while keeping the design consistent.\nUse a font color that contrasts with the background, usually black or white. Text should be easy to read at a glance. In most cases, high-contrast text is the safest and clearest option.\nDo not make your text so small that it becomes hard to read. Labels, titles, and annotations are only useful if your audience can comfortably read them.\n\nGood use of color and font should feel almost invisible: they should guide attention, improve clarity, and stay out of the way of the data.",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Theory</span>"
+    ]
+  },
+  {
+    "objectID": "theory.html#smu-brand-guidelines",
+    "href": "theory.html#smu-brand-guidelines",
+    "title": "\n2  Theory\n",
+    "section": "\n2.3 SMU Brand Guidelines",
+    "text": "2.3 SMU Brand Guidelines\nSMU Marketing and Communications publishes brand guidelines that should be used for any public-facing marketing content. Even for internal products, following brand guidelines is always a good idea, as long as it doesn’t take away from the visualization. Some journals may also have brand guidelines you need to follow.\nSMU Brand Guidelines: https://www.smu.edu/brand",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Theory</span>"
+    ]
+  },
+  {
+    "objectID": "types.html",
+    "href": "types.html",
+    "title": "\n3  Graph Types\n",
+    "section": "",
+    "text": "3.1 From Data to Viz\nChoosing the right graph type for your visualization can be daunting, but makes a world of difference for your audience.\nThis tool provides an easy flow chart to decide what graph types are appropriate for your data and sometimes provides code examples of how to implement it in R! Out of the appropriate graphs, you will still need to decide which graph conveys your information the best.\nVisit the website and try it out for yourself: from Data to Viz",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Graph Types</span>"
+    ]
+  },
+  {
+    "objectID": "types.html#what-to-avoid",
+    "href": "types.html#what-to-avoid",
+    "title": "\n3  Graph Types\n",
+    "section": "\n3.2 What to Avoid",
+    "text": "3.2 What to Avoid\nThere are some very popular graph types that often seem intuitive, but in practice, they make data harder to interpret rather than easier.\n\n3.2.1 Pie Charts\nPie charts are commonly used to show proportions, but they rely on angles and area, which humans are not great at comparing. This makes it difficult to accurately judge differences between categories, especially when values are similar.\n\n\n\n\n\n\n\n\nA better alternative to a pie chart is a bar plot:\n\n\n\n\n\n\n\n\n\n3.2.2 Spaghetti Charts\nWhen trying to compare the same data across different groups, the temptation is to just plot a different line for each group. However, this can easily become a visual nightmare.\n\n\n\n\n\n\n\n\nOne alternative is to split the plots into multiple “facets”, or subplots. We will look at how to implement this in R in later sections.\n\n\n\n\n\n\n\n\nSometimes, you want to highlight a specific group as it compares to the other groups in the dataset. A spaghetti plot is fine here, but with appropriate highlighting using color and line width:",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Graph Types</span>"
+    ]
+  },
+  {
+    "objectID": "types.html#field-conventions",
+    "href": "types.html#field-conventions",
+    "title": "\n3  Graph Types\n",
+    "section": "\n3.3 Field Conventions",
+    "text": "3.3 Field Conventions\nIn many fields there are standard or conventional visualizations that are used. When those conventions makes sense and the information is conveyed well, stick to them.\nBut, do not be afraid to use your creative license where conventions are bad or don’t make sense. Often conventions are arbitrary, and you might make a big difference in your field by introducing a new way to visualize the data.",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Graph Types</span>"
     ]
   },
   {
@@ -67,7 +144,7 @@
     "href": "method.html",
     "title": "4  The Method",
     "section": "",
-    "text": "Make a list of your constraints\n\nWho is your audience? Is this graphic for you, for a report, or for publishing?\nDo you have a color scheme or font you are required to use for branding?\nWhat graph types are compatible with your dataset? Is there a field standard?\n\nDefine a few research questions, then narrow it down to one.\nClean and transform your dataset, if needed.\nPerform an exploratory data analysis and identify which data answers your questions.\n\nThis includes statistical summaries, rough visualizations, and filtering.\n\nStart with an ugly graph and play around with scales, faceting, and graph types.\nFine tune your graphic to maximize the data-ink ratio, fit to your constraints, and make it look nice.\n\nConsider the color, font, and positioning. Do they softly draw your attention to the relevant data?\nAdd short meaningful labels that do not over explain.\nLayer any additional augmentations that color, font, position, and labels don’t address.\n\nRepeat steps 3-7 until you are satisfied, but remember that like art or writing, you can always improve.",
+    "text": "The following 7-step method is a useful framework for building a visualization that answers a specific question.\n\nMake a list of your constraints\n\nWho is your audience? Is this graphic for you, for a report, or for publishing?\nDo you have a color scheme or font you are required to use for branding?\nWhat graph types are compatible with your dataset? Is there a field standard?\n\nDefine a few research questions, then narrow it down to one.\nClean and transform your dataset, if needed.\nPerform an exploratory data analysis and identify which data answers your questions.\n\nThis includes statistical summaries, rough visualizations, and filtering.\n\nStart with an ugly graph and play around with scales, faceting, and graph types.\nFine tune your graphic to maximize the data-ink ratio, fit to your constraints, and make it look nice.\n\nConsider the color, font, and positioning. Do they softly draw your attention to the relevant data?\nAdd short meaningful labels that do not over explain.\nLayer any additional augmentations that color, font, position, and labels don’t address.\n\nRepeat steps 3-7 until you are satisfied, but remember that like art or writing, you can always improve.",
     "crumbs": [
       "Building in R",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>The Method</span>"
