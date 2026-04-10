@@ -668,63 +668,11 @@
     ]
   },
   {
-    "objectID": "handson.html",
-    "href": "handson.html",
-    "title": "Hands-On Exercises",
-    "section": "",
-    "text": "Exercise #1",
-    "crumbs": [
-      "Hands-On Exercises"
-    ]
-  },
-  {
-    "objectID": "handson.html#exercise-2",
-    "href": "handson.html#exercise-2",
-    "title": "Hands-On Exercises",
-    "section": "Exercise #2",
-    "text": "Exercise #2",
-    "crumbs": [
-      "Hands-On Exercises"
-    ]
-  },
-  {
-    "objectID": "solutions.html",
-    "href": "solutions.html",
-    "title": "Solutions",
-    "section": "",
-    "text": "Exercise #1",
-    "crumbs": [
-      "Hands-On Exercises",
-      "Solutions"
-    ]
-  },
-  {
-    "objectID": "solutions.html#exercise-2",
-    "href": "solutions.html#exercise-2",
-    "title": "Solutions",
-    "section": "Exercise #2",
-    "text": "Exercise #2",
-    "crumbs": [
-      "Hands-On Exercises",
-      "Solutions"
-    ]
-  },
-  {
     "objectID": "next_steps.html",
     "href": "next_steps.html",
     "title": "Next Steps",
     "section": "",
-    "text": "Workshops\nNow that you have mastered the basics of the data visualization in R, below are some resources to extend your learning.\nThe next part of this workshop series will take place at this time in the coming weeks.",
-    "crumbs": [
-      "Next Steps"
-    ]
-  },
-  {
-    "objectID": "next_steps.html#workshops",
-    "href": "next_steps.html#workshops",
-    "title": "Next Steps",
-    "section": "",
-    "text": "Workshop\nDate\nTime\nLocation\n\n\n\n\nData Science Workflow in R\nMarch 5th\n1:30-3:30\nFLE 109",
+    "text": "Workshops\nNow that you have mastered the basics of the data visualization in R, below are some resources to extend your learning.\nPlease visit LibCal to register for additional workshops.",
     "crumbs": [
       "Next Steps"
     ]
