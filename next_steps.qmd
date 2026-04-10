@@ -4,11 +4,7 @@ Now that you have mastered the basics of the data visualization in R, below are 
 
 ## Workshops
 
-The next part of this workshop series will take place at this time in the coming weeks.
-
-| Workshop                          | Date          | Time      | Location |
-|-----------------------------------|---------------|-----------|----------|
-| Data Science Workflow in R        | March 5th     | 1:30-3:30 | FLE 109  |
+Please visit [LibCal](https://libcal.smu.edu/calendar?cid=15527&t=g&d=0000-00-00&cal=15527&cm=8175&inc=0) to register for additional workshops.
 
 ## Online Resources
 

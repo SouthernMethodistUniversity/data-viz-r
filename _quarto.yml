@@ -31,9 +31,6 @@ book:
         - ggplot.qmd
         - plotly.qmd
         - leaflet.qmd
-    - part: handson.qmd
-      chapters: 
-        - solutions.qmd
     - next_steps.qmd
 
 format:
